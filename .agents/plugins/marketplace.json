@@ -1,0 +1,20 @@
+{
+  "name": "newtake",
+  "interface": {
+    "displayName": "Newtake"
+  },
+  "plugins": [
+    {
+      "name": "newtake",
+      "source": {
+        "source": "local",
+        "path": "./plugins/newtake"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Creativity"
+    }
+  ]
+}

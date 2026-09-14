@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "newtake": {
+      "type": "http",
+      "url": "https://mcp.newtake.ai/mcp"
+    }
+  }
+}
