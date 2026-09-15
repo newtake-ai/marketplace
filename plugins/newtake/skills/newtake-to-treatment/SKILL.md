@@ -304,6 +304,6 @@ The delivery reply briefly gives the HTML and ZIP links, total page count, and a
 
 ## 8. Maintaining This Skill
 
-Keep this `SKILL.md` lean. In English the text runs about 52,000 Unicode characters (≈8,200 words) for what the 20,000-character budget covered in Chinese — English needs roughly three times the characters for the same content, so that old number no longer measures anything. Treat the present length as the ceiling: do not let it grow, and when a new rule genuinely needs room, move detail into `references/` instead. Count the YAML, whitespace and punctuation, keep at least 10% of headroom, re-count after every edit, and validate the frontmatter and naming. The budget covers this skill text only, not the generated HTML or the proposal's page count, and it is never a licence to keep duplicate explanations.
+Keep this `SKILL.md` lean. It currently runs about 52,000 Unicode characters (≈8,200 words), and that length is the ceiling: do not let it grow, and when a new rule genuinely needs room, move detail into `references/` instead. Count the YAML, whitespace and punctuation, keep at least 10% of headroom, re-count after every edit, and validate the frontmatter and naming. The budget covers this skill text only, not the generated HTML or the proposal's page count, and it is never a licence to keep duplicate explanations.
 
 Tool capabilities and authentication follow the MCP connection's instructions and the live schema; do not hard-code private endpoints, temporary resource addresses, or specific account information here.
