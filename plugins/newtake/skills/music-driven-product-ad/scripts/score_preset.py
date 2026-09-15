@@ -136,7 +136,7 @@ def main():
     sub = parser.add_subparsers(dest="command", required=True)
     sub.add_parser("list", help="List the bundled scores and their scope")
     build = sub.add_parser("build", help="Prepare local note events for direct piano-key performance")
-    build.add_argument("piece", help="Chinese title, supported alias, or preset ID")
+    build.add_argument("piece", help="Piece title, supported alias, or preset ID")
     build.add_argument("--output", type=Path, required=True)
     build.add_argument("--start", type=float, default=0, help="Seconds at the saved default tempo")
     build.add_argument("--seconds", type=float, help="Output attack-window length; omit for remaining piece")

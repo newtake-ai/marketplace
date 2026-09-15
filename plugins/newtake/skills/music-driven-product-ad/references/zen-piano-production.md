@@ -5,11 +5,11 @@ Use this bundled workflow to turn the approved advertising music direction into 
 ## Workflow
 
 1. Open `https://zenpiano.art/play` with browser UI control, reusing the existing piano tab when available. Perform directly with supported piano-key actions; do not open the MIDI converter or add a file-conversion/import step. Treat pasted links containing prose after `/play` as malformed and use the canonical URL.
-2. Follow the user's instrument choice. For one of the bundled repertoire presets below, use **三角钢琴顺滑预设** unless the user or advertising direction calls for another sound. Otherwise choose the available Zen instrument that best fits the approved direction. Wait for the instrument-loading overlay to disappear before playing.
+2. Follow the user's instrument choice. For one of the bundled repertoire presets below, use the saved preset **三角钢琴顺滑预设** — that is its name as it appears in Zen Piano, so keep it verbatim rather than translating it — unless the user or advertising direction calls for another sound. Otherwise choose the available Zen instrument that best fits the approved direction. Wait for the instrument-loading overlay to disappear before playing.
 3. If a saved piece is requested, load its score through the repertoire section below and preserve its melody, accompaniment, rhythm, and note lengths. Compose original material by default for advertising. Respect the audition or final-cue duration and identify any repertoire excerpt as an excerpt.
 4. Start the site's recorder immediately before the first note. Play the piano keys directly with deliberate rhythm, then stop recording after the final note has decayed. Batch timed key actions when practical so tool-call latency does not create a long silent introduction.
 5. Verify the site's recording result before export: the recorder should show a nonzero note count and a plausible duration.
-6. Choose **Download recording → Download as WAV / 下载为 WAV**. Treat the site's “recording downloaded” toast as evidence that export was triggered, but still verify the file on disk.
+6. Choose **Download recording → Download as WAV**. Treat the site's “recording downloaded” toast as evidence that export was triggered, but still verify the file on disk.
 7. Identify the newly created `piano-recording-*.wav` in the user's Downloads folder by modification time captured around the export. Do not assume an older similarly named file is the result.
 8. Validate that the file is PCM WAV with a plausible duration and nontrivial size. Copy it to the requested folder with a descriptive `.wav` name. Do not overwrite an existing file; add a numeric suffix when needed.
 9. If the website added substantial leading or trailing silence, run `scripts/trim_wav_silence.py SOURCE DEST` from this skill's directory. Keep the downloaded source intact and deliver the cleaned copy. Optional `--target-seconds D` pads a shorter, complete cue with silence; it refuses to cut a longer cue. Inspect a quiet ending before relying on silence thresholds.
@@ -21,13 +21,13 @@ Use this named preset when the user requests the saved grand-piano sound or asks
 
 | Control | Saved value |
 | --- | --- |
-| Instrument | **Grand Piano / 三角钢琴**, distinct from 古典钢琴 |
-| Volume / 音量 | **55%** |
-| Sustain duration / Sustain 时长 | **Enabled; displayed total 0.6 seconds** |
-| Sustain pedal feature / Sustain 踏板 | **Disabled** |
-| Autoplay Release / 自动播放Release | **350 ms** |
+| Instrument | **Grand Piano**, distinct from Classical Piano |
+| Volume | **55%** |
+| Sustain duration | **Enabled; displayed total 0.6 seconds** |
+| Sustain pedal feature | **Disabled** |
+| Autoplay Release | **350 ms** |
 
-Apply and verify the values through the site's instrument and Sound / 声音 controls:
+Apply and verify the values through the site's instrument and Sound controls:
 
 - The Sustain slider is an **adjustment**, not an absolute duration. In the observed UI, a 10.5-second base required **−9.9 seconds** to display a **0.6-second total**. Target the displayed total; recalculate the adjustment if the base changes.
 - Sustain duration and the pedal feature are mutually exclusive. Re-read the switches and displayed total after changing them. An adjustment near the lower limit can disable Sustain and leave a 0.0-second total; do not mistake that state for the saved preset.
@@ -55,22 +55,22 @@ The tested keyboard spans C2–C7; preserve the original key and identify any oc
 
 For a screen recording requested alongside the performance, use [screen-recording.md](screen-recording.md). The screen file remains silent; the soundtrack comes only from the site WAV.
 
-## Saved Repertoire / 曲谱预设
+## Saved Repertoire
 
 These presets include local source scores and note sequences with independent onsets, durations, velocities, and simultaneous chords. Read [repertoire.md](repertoire.md) when a piece is requested; use [../scripts/score_preset.py](../scripts/score_preset.py) with `--format events` to select the score, prepare an excerpt or full sequence, and preserve timing when changing speed. Read the note data locally and perform it directly on the Zen Piano keyboard.
 
 | User-facing name | Preset ID | Exact work |
 | --- | --- | --- |
-| C大调前奏曲 | `bach-c-major-prelude` | Bach, BWV 846, WTC I Prelude No. 1 |
-| 小狗圆舞曲 / 一分钟圆舞曲 | `chopin-minute-waltz` | Chopin, Op. 64 No. 1 |
-| 雨滴前奏曲 | `chopin-raindrop-prelude` | Chopin, Op. 28 No. 15 |
-| 裸体歌舞 No.1 / Gymnopédie No.1 | `satie-gymnopedie-1` | Satie, Gymnopédie No. 1 |
-| 致爱丽丝 | `beethoven-fur-elise` | Beethoven, WoO 59 |
-| 婚礼进行曲 | `mendelssohn-wedding-march` | Mendelssohn, Op. 61 No. 9; Dubois organ transcription played with piano sound |
-| G大调小步舞曲 | `petzold-minuet-g` | Christian Petzold, BWV Anh.114 |
-| 悲怆奏鸣曲第二乐章 | `beethoven-pathetique-ii` | Beethoven, Op.13, II. Adagio cantabile |
+| Prelude in C Major | `bach-c-major-prelude` | Bach, BWV 846, WTC I Prelude No. 1 |
+| Minute Waltz | `chopin-minute-waltz` | Chopin, Op. 64 No. 1 |
+| Raindrop Prelude | `chopin-raindrop-prelude` | Chopin, Op. 28 No. 15 |
+| Gymnopédie No. 1 | `satie-gymnopedie-1` | Satie, Gymnopédie No. 1 |
+| Für Elise | `beethoven-fur-elise` | Beethoven, WoO 59 |
+| Wedding March | `mendelssohn-wedding-march` | Mendelssohn, Op. 61 No. 9; Dubois organ transcription played with piano sound |
+| Minuet in G Major | `petzold-minuet-g` | Christian Petzold, BWV Anh.114 |
+| Pathétique Sonata, Second Movement | `beethoven-pathetique-ii` | Beethoven, Op.13, II. Adagio cantabile |
 
-For this saved library, an unqualified “婚礼进行曲” means the Mendelssohn preset; identify the composer when using it. Do not resolve an explicit request for Wagner's Bridal Chorus to this file. Preserve original pitch by default and inspect the helper's range report before using the observed C2–C7 keyboard. Never silently discard out-of-range notes or call an octave-adapted performance an unchanged original score.
+For this saved library, an unqualified “Wedding March” means the Mendelssohn preset; identify the composer when using it. Do not resolve an explicit request for Wagner's Bridal Chorus to this file. Preserve original pitch by default and inspect the helper's range report before using the observed C2–C7 keyboard. Never silently discard out-of-range notes or call an octave-adapted performance an unchanged original score.
 
 ## Useful Key Map
 

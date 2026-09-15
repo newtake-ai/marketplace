@@ -1,93 +1,94 @@
-# Seedance 2.5 横向剖面滚动广告 Prompt
+# Seedance 2.5 Horizontal Cross-Section Scrolling Ad Prompt
 
-使用本模版生成横向剖面滚动、一镜到底的产品广告。Prompt 用中文撰写，整体控制在约 1500–2000 个汉字，每句只表达一项视觉或动作要求。
+Use this template to generate a horizontal cross-section scrolling, one-take product ad. Write the Prompt in English and keep it around 1500–2000 characters, with each sentence expressing exactly one visual or action requirement.
 
-## 参数与素材边界
+## Parameters and Asset Boundaries
 
-- 在 Seedance 接口中设置项目总时长、画幅和分辨率；本 Skill 默认 D = 20 秒；用户指定 25 秒等时长时，所有动作区间与接口时长统一使用 D。文件名中的 2.5 是模型版本，不是时长。正文只保留连续动作需要的时间范围。
-- `@图片1` 是唯一产品参考图，用于锁定颜色、图案、材质和产品自身文字。
-- `@图片2` 是 3:4 头肩定脸图，只锁定主角五官、发型和肤质。主角服装写在视频 Prompt 中，参考图背景不进入视频。
-- 只向视频模型提供这两张视觉参考图。地标、光线和空间形态全部用文字描述。
-- Prompt 不写配乐、节拍或卡点。要求视频不生成背景音乐，只保留各空间的具体环境声；Zen Piano WAV 在后期合成。
-- 不要求视频模型生成外加 Logo、字幕或精确文字修正。产品已有文字时，通过 `@图片1` 锁定，声明文字不得串到其他物体，并在输出后核对。
+- Set the project's total duration, aspect ratio, and resolution in the Seedance interface; this Skill defaults to D = 20 seconds. When the user specifies a duration such as 25 seconds, use D uniformly for all action ranges and the interface duration. The 2.5 in the filename is the model version, not a duration. Keep only the time ranges the continuous action needs in the body.
+- Write the two reference tokens exactly as `@图片1` and `@图片2`. They are the interface's reference-image tokens, not words: never translate, renumber or re-spell them, and before submitting confirm they match how the canvas labels the reference images you attached.
+- `@图片1` is the single product reference image, used to lock the color, pattern, material, and the product's own text.
+- `@图片2` is a 3:4 head-and-shoulders identity image that locks only the protagonist's facial features, hairstyle, and skin texture. The protagonist's outfit is written into the video Prompt; the reference image's background does not enter the video.
+- Provide only these two visual reference images to the video model. Describe landmarks, lighting, and spatial forms entirely in text.
+- Do not write music, beats, or sync points in the Prompt. Ask the video not to generate background music and to keep only the specific environmental sound of each space; the Zen Piano WAV is composited in post.
+- Do not ask the video model to generate an added logo, subtitles, or precise text correction. When the product already has text, lock it via `@图片1`, state that the text must not leak onto other objects, and verify it after output.
 
-## 固定模版
+## Fixed Template
 
-用项目内容替换方括号。产品没有字母或文字时，删除对应防串句。
+Replace the square brackets with project content. When the product has no letters or text, delete the corresponding text-containment sentence.
 
 ```text
-@图片1用于[产品]的[颜色、图案、材质要点]，全片始终只有这一个[产品]。[字母或文字]只出现在[产品]上，不出现在任何其他物体、建筑、交通工具或标牌上。
-@图片2用于主角的五官、发型和肤质，只在开头和结尾出现，开头与结尾为同一人，不采用图片背景。主角服装为[服装描述]。
+@图片1 is used for the [color, pattern, and material key points] of the [product]. The whole film has only this one [product]. [Letters or text] appear only on the [product], and not on any other object, building, vehicle, or sign.
+@图片2 is used for the protagonist's facial features, hairstyle, and skin texture, and appears only at the opening and ending. The opening and ending are the same person, and the image background is not adopted. The protagonist's outfit is [outfit description].
 
-【生成目标】
-一支时尚广告，一镜到底，没有任何切镜，没有叠化、溶解或半透明重叠。全片是一座真实连续的横向舞台剖面。空间分界随背景向左滑动，不是独立分屏或剪辑擦除。每个空间都是正侧面的平面剖面，没有消失点，所有结构线只保持水平或垂直。地平线始终位于画面下四分之一。机位高度、机位距离和视角全程不变。[N]个空间在同一条地平线上并排相接。空间接缝是一条笔直垂直的硬边，属于同一连续舞台的背景结构。硬边两侧的地平线高度、比例尺和视角完全相同，光线可以不同。硬边随横移向左滑过画面。前一个空间尚未完全滑出左侧时，后一个空间已经从右侧进入，两者在同一帧内并存。分界处没有任何遮挡物，只有竖直硬边。
+[Generation goal]
+A fashion ad, one continuous take, with no cuts, no dissolves, blends, or semi-transparent overlaps. The whole film is one real, continuous horizontal stage cross-section. Space boundaries slide left with the background, not as separate splits or edit wipes. Each space is a flat side-view cross-section with no vanishing point; all structural lines stay only horizontal or vertical. The horizon always sits at the lower quarter of the frame. Camera height, camera distance, and viewing angle stay unchanged throughout. [N] spaces are joined side by side on the same horizon. The space seam is a straight vertical hard edge that belongs to the same continuous stage's background structure. The horizon height, scale, and viewing angle are identical on both sides of the hard edge; lighting may differ. The hard edge slides left across the frame with the lateral move. Before the previous space has fully slid out of the left side, the next space has already entered from the right, and both coexist in the same frame. There is no obstruction at the boundary, only a vertical hard edge.
 
-【景别与尺度】
-全片为大全景，机位距离远。站立人物的高度只占画面高度四分之一到三分之一。人物周围保留大量环境空间，并能看到完整的场景结构。[载体]始终很小。它完全展开时的宽度不超过人物身高三分之一，运动中大部分时间约为人物头部大小，是画面里一个小而醒目的[颜色]点。人物大小和[载体]大小在所有空间中保持一致。
+[Framing and scale]
+The whole film is a wide shot with a distant camera. A standing person's height occupies only one quarter to one third of the frame height. Plenty of environmental space remains around the person, and the full scene structure is visible. The [carrier] always stays small. Its fully spread width is no more than one third of the person's height, and for most of its motion it is about head size — a small, eye-catching [color] point in the frame. Person size and [carrier] size stay consistent across all spaces.
 
-【载体的运动】
-[载体]从左向右持续[运动方式]，穿过每一条硬边。它[被驱动力推动的具体描写]，不走笔直路线。它会[动态1]、[动态2]、[动态3]、[动态4]，并呈现[柔软、褶皱、透光、反光等材质细节]。整体趋势始终向右，路径是一条有呼吸感的曲线。
+[Carrier motion]
+The [carrier] continuously [movement verb] from left to right, crossing every hard edge. It [specific description of being driven by the driving force] and does not follow a straight route. It [dynamic 1], [dynamic 2], [dynamic 3], [dynamic 4], and shows [softness, folds, light transmission, reflection, and other material details]. The overall trend is always rightward, and the path is a curve with a sense of breathing.
 
-【运动方向铁律】
-全片所有主动运动只向右。镜头向右横移，[驱动力]从左往右，[载体]向右[运动方式]，[各空间的交通工具、动物或物体]向右。所有人物面朝右或视线追向右，主角最后向右走出画面。背景层因镜头横移从右向左滑过，前景与背景有轻微视差。不出现任何主动向左的运动，人物不转身面向左。
+[Motion direction rules]
+All active motion in the whole film moves only rightward. The camera pans right; the [driving force] goes from left to right; the [carrier] [movement verb] rightward; and [vehicles, animals, or objects in each space] move right. All people face right or track right with their gaze, and the protagonist finally walks out of frame to the right. The background layer slides from right to left because of the camera pan, with slight parallax between foreground and background. No active leftward motion appears, and no person turns to face left.
 
-0-[t1]秒：镜头静止。[空间1城市或地点名]，[2–3个标志性可见特征]。[剖面几何句：机位位置；地面沿画面底边水平延伸；主体从左到右横贯画面；只看到面向镜头的一侧]。[光线]，[2–3个环境细节]。[场景事件]在首帧已经发生。主角[携带或穿着产品]，从左侧边缘[急匆匆或快步]入画，正侧面朝右[追赶动作]。
+0–[t1] seconds: the camera is still. [Space 1 city or place name], [2–3 iconic visible features]. [Cross-section geometry sentence: camera position; the ground extends horizontally along the bottom edge of the frame; the subject runs across the frame from left to right; only the side facing the camera is visible]. [Lighting], [2–3 environmental details]. [Scene event] has already happened in the first frame. The protagonist [carries or wears the product] and enters from the left edge [hurriedly or at a quick pace], in profile facing right with [pursuit action].
 
-[t1]-[t2]秒：[按先后顺序写出产品离开主角的具体身体动作和物理原因]。镜头从此刻开始向右匀速横移，直到第[t_stop]秒。[载体]向右[运动方式]。主角留在画面左侧并保持[定格姿态]。竖直硬边从右侧边缘进入。硬边右侧是[空间2]，地平线与[空间1地平线]等高。
+[t1]–[t2] seconds: [write, in order, the specific body actions and physical reason the product leaves the protagonist]. From this moment the camera pans right at a constant speed until second [t_stop]. The [carrier] [movement verb] rightward. The protagonist stays on the left side of the frame and holds [frozen pose]. A vertical hard edge enters from the right edge. To the right of the hard edge is [space 2], with its horizon at the same height as [space 1 horizon].
 
-[t2]-[t3]秒：[空间2]，大全景。[剖面几何句]。[地标]只在背景层正面对镜头出现一次，前景不出现任何[地标]的局部结构。[光线方向和色温]。[载体]在画面[下、中或上]三分之一处向右[运动方式]，同时[一个小的动态变化]。[人物]以正侧面面朝右，[身体动作与障碍或距离构成的差一点动作]，视线追向右。下一条竖直硬边从右侧进入，硬边右侧是[空间3]，地平线等高。
+[t2]–[t3] seconds: [space 2], wide shot. [Cross-section geometry sentence]. [Landmark] appears once in the background layer, facing the camera directly; no partial structure of [landmark] appears in the foreground. [Light direction and color temperature]. The [carrier] [movement verb] rightward in the [lower, middle, or upper] third of the frame, with [one small dynamic change]. [Person], in profile facing right, [near-catch action made of body movement and an obstacle or distance], gaze tracking right. The next vertical hard edge enters from the right; to its right is [space 3], at the same horizon height.
 
-[t3]-[t4]秒：[空间3]，大全景。[剖面几何句]。[地标]只在背景层出现一次，前景不复制其结构。[光线和环境细节]。[载体]向右[运动方式]并完成[动态变化]。[空间内至多一个运动物]向右运动，只显示面向镜头的一侧。下一条竖直硬边进入，右侧是[空间4]，地平线等高。
+[t3]–[t4] seconds: [space 3], wide shot. [Cross-section geometry sentence]. [Landmark] appears once in the background layer, and the foreground does not duplicate its structure. [Lighting and environmental details]. The [carrier] [movement verb] rightward and completes [dynamic change]. [At most one moving object in the space] moves right, showing only the side facing the camera. The next vertical hard edge enters; to its right is [space 4], at the same horizon height.
 
-[t4]-[t5]秒：[空间4]，大全景。[剖面几何句]。[地标、光线和环境细节]。[载体]在画面[下、中或上]三分之一处向右[运动方式]。[人物的具体差一点动作]，人物面朝右，视线追向右。下一条竖直硬边进入，右侧是[空间5]，地平线等高。
+[t4]–[t5] seconds: [space 4], wide shot. [Cross-section geometry sentence]. [Landmark, lighting, and environmental details]. The [carrier] [movement verb] rightward in the [lower, middle, or upper] third of the frame. [Person's specific near-catch action], the person faces right, gaze tracking right. The next vertical hard edge enters; to its right is [space 5], at the same horizon height.
 
-[t5]-[t_stop]秒：[空间5]，大全景。[剖面几何句]。[前景结构]作为一条水平线横贯前景。[载体]向右[运动方式]并在画框内逐渐降低，接近主角。主角正侧面站在[位置]，面朝右。[环境对她的可见影响]。她抬头看到[载体]。
+[t5]–[t_stop] seconds: [space 5], wide shot. [Cross-section geometry sentence]. [Foreground structure] runs across the foreground as a horizontal line. The [carrier] [movement verb] rightward and gradually lowers within the frame, approaching the protagonist. The protagonist stands in profile at [position], facing right. [Visible environmental effect on her]. She looks up and sees the [carrier].
 
-[t_stop]-[总时长]秒：[载体]落向主角，她[抓住或接住产品]。镜头在此刻完全停止，之后保持静止到结束。她[展示产品一眼，产品文字正对镜头]，然后[穿戴或收起产品]，完成[整理类小动作]。她转身，以正侧面朝右走出画面右侧边缘。画面留下空的[空间5]剖面，[一个环境微动]，静止两秒后结束。
+[t_stop]–[total duration] seconds: the [carrier] drops toward the protagonist, and she [grabs or catches the product]. The camera fully stops at this moment and stays still until the end. She [shows the product briefly, product text facing the camera], then [puts on or stows the product] and completes [a small tidying action]. She turns and walks out of the right edge of the frame in profile, facing right. The frame leaves an empty [space 5] cross-section with [one environmental micro-motion], holds still for two seconds, and ends.
 
-【保持一致】
-全片只有一个[产品]，与@图片1一致，[颜色、图案、文字]始终不变。主角开头与结尾为同一人，与@图片2一致，服装不变。地平线高度、机位高度、机位距离、视角和景别全程相同，始终是大全景。各空间比例尺一致。人物在所有空间中大小相同。[载体]在所有空间中大小相同且始终很小。每个地标只出现一次，只在背景层。
+[Consistency]
+The whole film has only one [product], consistent with @图片1, and [color, pattern, text] never change. The protagonist at the opening and ending is the same person, consistent with @图片2, with unchanged clothing. Horizon height, camera height, camera distance, viewing angle, and framing stay the same throughout — always a wide shot. Scale is consistent across all spaces. People are the same size in all spaces. The [carrier] is the same size in all spaces and always stays small. Each landmark appears once, only in the background layer.
 
-无背景音乐，只保留环境声：[为每个空间写一句具体声音]。各空间的环境声平滑过渡。不要字幕。
+No background music, keep only environmental sound: [write one specific sound for each space]. The environmental sound of each space transitions smoothly. No subtitles.
 ```
 
-使用 3–4 个空间时，删除多余空间段，保证时间段连续，不保留空占位。
+When using 3–4 spaces, delete the extra space blocks, keep the time ranges continuous, and leave no empty placeholders.
 
-## 替换位规则
+## Placeholder Rules
 
-| 替换位 | 填写要求 |
+| Placeholder | How to fill |
 |---|---|
-| 剖面几何句 | 写可见关系：机位在对面或与主体同高；地面沿底边水平延伸；交通工具横贯画面且只看一侧；地标正面对镜头且塔身垂直 |
-| 运动方式 | 用一个词，全片一致，例如飘、滚、飞、滑或走 |
-| 载体动态 | 写 3–4 个可见动作词，如浮沉、翻卷、打旋、忽快忽慢，并添加材质反应；不用“生动”“灵动” |
-| 触发事件 | 写清产品离开主角的物理原因和身体动作先后顺序 |
-| 差一点动作 | 写身体、障碍或距离，例如指尖距后角一掌、被栏杆挡住半步、被拉住腰带或手掌下方一掌距离 |
-| 地标 | 写“只在背景层正面对镜头出现一次”和“前景不出现其结构” |
-| 空间内运动物 | 每个空间最多一个，明确向右，并只显示面向镜头的一侧 |
-| 空间1开场 | 写地点和 2–3 个标志性可见特征；事件已经开始，主角是追赶者 |
-| 环境声 | 每个空间一句可听见的具体声音；不写音乐 |
+| Cross-section geometry sentence | Write visible relationships: the camera is opposite or level with the subject; the ground extends horizontally along the bottom edge; the vehicle runs across the frame showing only one side; the landmark faces the camera directly with a vertical tower |
+| Movement verb | One word, consistent across the film, e.g. float, roll, fly, slide, or walk |
+| Carrier dynamics | Write 3–4 visible action words such as bob up and down, tumble, spin, speed up and slow down, and add material reaction; do not use "lively" or "vivid" |
+| Trigger event | Specify the physical reason the product leaves the protagonist and the order of the body actions |
+| Near-catch action | Write the body, obstacle, or distance, e.g. fingertips a palm's width from the rear corner, blocked half a step by a railing, held back by the belt, or a palm's width below the hand |
+| Landmark | Write "appears once in the background layer facing the camera directly" and "its structure does not appear in the foreground" |
+| Moving object in a space | At most one per space, clearly moving right, showing only the side facing the camera |
+| Space 1 opening | Write the place and 2–3 iconic visible features; the event has already started and the protagonist is the pursuer |
+| Environmental sound | One audible, specific sound per space; do not write music |
 
-伦敦地铁作为空间时，不要只写“伦敦地铁”。写出红白蓝圆顶车厢、白瓷砖弧墙和 Underground 路徽等可见特征；再明确机位在对面站台，轨道沿画面底边水平延伸，车身从左到右横贯画面，只看到面向镜头的一侧。开场首帧让车门已经在关闭，主角作为追赶者入画。
+When the London Underground is a space, do not write only "London Underground". Write the visible features such as the red, white, and blue rounded carriages, the curved white-tile walls, and the Underground roundel; then specify that the camera is on the opposite platform, the tracks extend horizontally along the bottom edge of the frame, the train body runs across the frame from left to right, and only the side facing the camera is visible. In the opening first frame, have the doors already closing, with the protagonist entering as the pursuer.
 
-## 已知失败模式
+## Known Failure Modes
 
-| 现象 | 修正规则 |
+| Symptom | Fix |
 |---|---|
-| 画面出现纵深透视 | 不只写“正侧面”；补充机位、地面、主体横贯方向和只看一侧的剖面几何句 |
-| 地标在前景和背景重复 | 接缝不用物体；地标只在背景出现一次，前景不出现其局部 |
-| 接缝歪斜或地平线不齐 | 使用无遮挡的竖直硬边，并锁定两侧地平线等高、比例尺相同 |
-| 独立分屏或擦除代替横移 | 明确同一物理舞台、背景连续左移；不要写成贴图分屏；若结果仍如此，如实标为未达到一镜到底 |
-| 空间之间叠化 | 在生成目标开头禁止叠化、溶解和半透明重叠 |
-| 天空场景变成航拍 | 写机位与主体同高、地平线在下四分之一、天空占上方约四分之三 |
-| 产品文字复制到场景 | 声明文字只出现在产品上，不出现在任何其他物体上 |
-| 载体走直线或像硬板 | 单独写载体运动块，使用 3–4 个具体动态与材质词 |
-| 景别太近或载体巨大 | 单独写景别与尺度块，给人物和载体明确数字比例 |
-| 地点识别错误 | 写城市名和可见的配色、材质、标志或结构，不只写地点名称 |
-| 开场动作顺序错误 | 让场景事件在首帧已经发生，并明确主角是追赶者 |
+| Depth perspective appears | Do not write only "side view"; add the cross-section geometry sentence for the camera, ground, the subject's run-across direction, and showing only one side |
+| Landmark repeats in foreground and background | Do not use objects at the seam; the landmark appears once in the background, and its partial does not appear in the foreground |
+| Seam slanted or horizon misaligned | Use an unobstructed vertical hard edge and lock equal horizon height and the same scale on both sides |
+| Separate split-screen or wipe instead of lateral move | Specify the same physical stage and the background's continuous leftward slide; do not write it as a mapped split-screen; if the result still does this, honestly label it as not achieving a one-take |
+| Dissolve between spaces | Forbid dissolves, blends, and semi-transparent overlaps at the start of the generation goal |
+| Sky scene becomes aerial | Write the camera level with the subject, the horizon in the lower quarter, and the sky taking about the upper three quarters |
+| Product text copied into the scene | State that the text appears only on the product and not on any other object |
+| Carrier moves in a straight line or like a rigid board | Write the carrier motion block separately, using 3–4 specific dynamics and material words |
+| Framing too close or carrier huge | Write the framing-and-scale block separately, giving clear numeric ratios for person and carrier |
+| Place misidentified | Write the city name and visible colors, materials, signs, or structures, not just the place name |
+| Opening action order wrong | Have the scene event already happened in the first frame and make clear the protagonist is the pursuer |
 
-## Newtake 提交边界
+## Newtake Submission Boundary
 
-- 使用 live Seedance 2.5 schema 设置时长、画幅、分辨率和两个真实参考图，不猜参数名。
-- 一次生成完整目标时长的一镜到底视频。禁止按空间拆成多个节点、生成后拼接或写成多分镜剪辑。
-- `@图片1` 与 `@图片2` 的引用顺序必须和上传节点一致。
-- 若 live schema 有独立 Negative Prompt 字段，写入无切镜、无反向运动、无透视消失点、无机位变化、无接缝遮挡、无叠化、无产品复制或文字串位、无人物身份漂移、无字幕水印等约束。不要杜撰不受支持的字段。
+- Use the live Seedance 2.5 schema to set duration, aspect ratio, resolution, and the two real reference images; do not guess parameter names.
+- Generate one one-take video of the full target duration. Do not split it into multiple nodes per space, stitch after generation, or write it as a multi-shot edit.
+- The reference order of `@图片1` and `@图片2` must match the uploaded nodes.
+- If the live schema has a separate Negative Prompt field, write constraints such as no cuts, no reverse motion, no perspective vanishing point, no camera change, no seam obstruction, no dissolves, no product duplication or text leakage, no protagonist identity drift, and no subtitles or watermark. Do not invent unsupported fields.

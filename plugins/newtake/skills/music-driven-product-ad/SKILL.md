@@ -112,9 +112,9 @@ Place hard-edge crossings and major actions on verified structural events in the
 
 ### 6. Write one Seedance 2.5 one-take prompt
 
-- Write the prompt in Chinese unless the user explicitly requests English.
+- Write the prompt in English.
 - Use the fixed section order in [references/seedance-2.5-prompt.md](references/seedance-2.5-prompt.md): two image-reference declarations, generation goal, framing and scale, carrier motion, direction rules, continuous timeline, consistency rules, and environmental audio.
-- Keep the Prompt around 1500–2000 Chinese characters and give each sentence one job.
+- Keep the Prompt around 1500–2000 characters and give each sentence one job.
 - Bind the product to `@图片1`. Bind only the protagonist's face, hair, and skin to `@图片2`; specify the full outfit in the video Prompt and repeat it unchanged at the opening and ending.
 - When the product contains text, state that it appears only on the product and nowhere else. Give every space a concrete geometry sentence rather than relying on the phrase “side view.”
 - Do not put model, duration, aspect ratio, or resolution in the prose specification; set them in the live interface. Whole-second timeline ranges remain in the Prompt to control the continuous action.

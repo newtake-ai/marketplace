@@ -1,21 +1,21 @@
-# 曲谱预设：选择、准备与演奏
+# Saved Repertoire: Selection, Preparation, and Performance
 
 Read only when using one of the bundled pieces. The sound controls remain in [zen-piano-production.md](zen-piano-production.md); do not duplicate or silently revise the saved smooth preset here.
 
 ## Local resources and exact versions
 
-`assets/scores/catalog.json` is the catalog of Chinese names, aliases, source URLs, attribution, tempo settings, duration, note count, range, and transformations. Each piece has an unchanged source `.mid` and an expanded `.score.json` with integer note-on and duration ticks. Source track/channel fields retain voice provenance, but are not a guaranteed right-hand/left-hand label. All voices are performed using the user's selected instrument.
+`assets/scores/catalog.json` is the catalog of titles, aliases, source URLs, attribution, tempo settings, duration, note count, range, and transformations. Each piece has an unchanged source `.mid` and an expanded `.score.json` with integer note-on and duration ticks. Source track/channel fields retain voice provenance, but are not a guaranteed right-hand/left-hand label. All voices are performed using the user's selected instrument.
 
 | Preset | Saved quarter-note BPM | Approximate saved sequence | Source and version |
 | --- | ---: | ---: | --- |
-| C大调前奏曲 | 68 | 2:04 | [Bach BWV 846, Prelude only](https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=5), typeset by Tobias Erbsland |
-| 小狗圆舞曲 | 240 | 1:45 | [Chopin Op. 64 No. 1](https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=483), Peters source, Magnus Lewis-Smith |
-| 雨滴前奏曲 | 72 | 4:57 | [Chopin Op. 28 No. 15](https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=471), Peters source, Magnus Lewis-Smith |
-| 裸体歌舞 No.1 | 60 | 3:54 | [Satie Gymnopédie No. 1](https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=37), Dover source, Evin Robertson |
-| 致爱丽丝 | 80 | 2:20 | [Beethoven WoO 59](https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=931), Breitkopf & Härtel 1888 source, Stelios Samelis |
-| 婚礼进行曲 | 120 | 6:14 | [Mendelssohn Op. 61, Wedding March](https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=2198), Théodore Dubois organ transcription; typeset by Alexander Brock |
-| G大调小步舞曲 | 120 | 0:48 | [Christian Petzold, BWV Anh.114](https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=75); 32-bar source sequence, no added repeats |
-| 悲怆奏鸣曲第二乐章 | 36 | 4:03 | [Beethoven Op.13, II. Adagio cantabile](https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=295); Chris Sawer edition, updated by Javier Ruiz-Alma |
+| Prelude in C Major | 68 | 2:04 | [Bach BWV 846, Prelude only](https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=5), typeset by Tobias Erbsland |
+| Minute Waltz | 240 | 1:45 | [Chopin Op. 64 No. 1](https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=483), Peters source, Magnus Lewis-Smith |
+| Raindrop Prelude | 72 | 4:57 | [Chopin Op. 28 No. 15](https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=471), Peters source, Magnus Lewis-Smith |
+| Gymnopédie No. 1 | 60 | 3:54 | [Satie Gymnopédie No. 1](https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=37), Dover source, Evin Robertson |
+| Für Elise | 80 | 2:20 | [Beethoven WoO 59](https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=931), Breitkopf & Härtel 1888 source, Stelios Samelis |
+| Wedding March | 120 | 6:14 | [Mendelssohn Op. 61, Wedding March](https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=2198), Théodore Dubois organ transcription; typeset by Alexander Brock |
+| Minuet in G Major | 120 | 0:48 | [Christian Petzold, BWV Anh.114](https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=75); 32-bar source sequence, no added repeats |
+| Pathétique Sonata, Second Movement | 36 | 4:03 | [Beethoven Op.13, II. Adagio cantabile](https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=295); Chris Sawer edition, updated by Javier Ruiz-Alma |
 
 The tempos above are saved audition choices, not claims about mandatory composer metronome marks. They use **quarter notes per minute**; 240 BPM in the waltz is 80 three-beat measures per minute. A title such as “Minute Waltz” is not an instruction to compress the piece to one minute. “Full sequence” means this identified source arrangement; the wedding preset is not an orchestral score or a two-hand piano edition.
 
@@ -25,9 +25,9 @@ Use Python 3; no third-party packages are required. Run from this skill's direct
 
 ```sh
 python3 scripts/score_preset.py list
-python3 scripts/score_preset.py build '雨滴前奏曲' --seconds 10 --format events --output /private/tmp/raindrop-10s-events.json
-python3 scripts/score_preset.py build '致爱丽丝' --format events --output /private/tmp/fur-elise-full-events.json
-python3 scripts/score_preset.py build 'C大调前奏曲' --seconds 5 --format events --output /private/tmp/bach-5s-events.json
+python3 scripts/score_preset.py build 'Raindrop Prelude' --seconds 10 --format events --output /private/tmp/raindrop-10s-events.json
+python3 scripts/score_preset.py build 'Für Elise' --format events --output /private/tmp/fur-elise-full-events.json
+python3 scripts/score_preset.py build 'Prelude in C Major' --seconds 5 --format events --output /private/tmp/bach-5s-events.json
 ```
 
 Choose a fresh output filename: the helper refuses to overwrite. Its output report identifies the exact work, scope, duration, note count, effective tempo, and any notes outside the observed keyboard range. Preparing a file does not mean the website has played or recorded it.
@@ -48,7 +48,7 @@ Map pitches to the current keyboard, group simultaneous notes into chords, and p
 
 For independent note holds on macOS, follow the optional native keyboard route in [zen-piano-production.md](zen-piano-production.md). `score_preset.py` event output declares milliseconds; the native helper validates this unit explicitly before playing.
 
-An unqualified “悲怆奏鸣曲” names the sonata, not one specific movement. Identify or clarify the movement before performing. The bundled score is the second movement only; it must not replace an explicit first- or third-movement request.
+An unqualified “Pathétique Sonata” names the sonata, not one specific movement. Identify or clarify the movement before performing. The bundled score is the second movement only; it must not replace an explicit first- or third-movement request.
 
 ### Optional 25-second Pathétique theme adaptation
 
