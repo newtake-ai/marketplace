@@ -7,7 +7,7 @@ The final cue defaults to 20 seconds, but its tempo, meter, groove, phrasing, ac
 ## Material, Instrument, and Saved Presets
 
 - **Original cue:** the default when the brief does not call for an existing piece. Develop a motif, harmonic movement, rhythmic identity, and ending that fit the product and audience.
-- **Saved repertoire:** when requested or clearly suitable, read [repertoire.md](repertoire.md) and use the bundled `assets/scores/catalog.json` and `scripts/score_preset.py`. The library includes C大调前奏曲、小狗圆舞曲、雨滴前奏曲、裸体歌舞 No.1、致爱丽丝、婚礼进行曲、G大调小步舞曲、悲怆奏鸣曲第二乐章. Use the catalog for aliases, exact versions, tempo units, note range, source attribution, and arrangement limitations. Identify an adaptation as an adaptation and retain the selected score's recognizable melody, rhythm, and accompaniment unless a change is requested.
+- **Saved repertoire:** when requested or clearly suitable, read [repertoire.md](repertoire.md) and use the bundled `assets/scores/catalog.json` and `scripts/score_preset.py`. The library includes the Prelude in C Major, Minute Waltz, Raindrop Prelude, Gymnopédie No. 1, Für Elise, Wedding March, Minuet in G Major, and Pathétique Sonata, Second Movement. Use the catalog for aliases, exact versions, tempo units, note range, source attribution, and arrangement limitations. Identify an adaptation as an adaptation and retain the selected score's recognizable melody, rhythm, and accompaniment unless a change is requested.
 - **Target-duration arrangement:** choose a coherent passage and compose or arrange a compatible close with room for decay. The helper's `--seconds 20` selects an attack window; it does not by itself create a cadence or guarantee a 20-second rendered WAV. Do not rush a whole piece, loop five seconds mechanically, or cut a sounding final note merely to fill the ad duration.
 - **Reference audio:** distinguish timbre, rhythmic onsets, accents, register, phrasing, and release before choosing what to emulate. State which traits are being adapted. A rough groove adaptation is not a verified note-for-note transcription.
 - **Instrument:** honor the user's selection; otherwise match the brief and available Zen timbres. Grand piano, electric guitar, and electric bass are valid choices when available. Use an electronic/synth-like option only if the current UI actually offers it. Choose the instrument explicitly before applying the bundled recording workflow's fallback.
@@ -56,7 +56,7 @@ Always state:
 - **Contrast arc:** quiet tactile detail → sharp kinetic burst → quiet premium hold.
 - **Wave arc:** alternating build and release aligned with feature groups or environments.
 
-Do not confuse “高级感” with one genre. Premium character can come from restraint, voicing, touch, timing, dynamics, pedal control, silence, or editorial confidence.
+Do not confuse a “premium feel” with one genre. Premium character can come from restraint, voicing, touch, timing, dynamics, pedal control, silence, or editorial confidence.
 
 ## Five-Second Auditions and Connected Notes
 

@@ -35,5 +35,5 @@ If the helper is unavailable, use an already available screen recorder that can 
 
 - Inspect the saved recording near the start, during held notes, and after the final release. Verify the page is the correct piano and the key states actually change; a successful file write alone is insufficient.
 - Verify the screen file contains one video track and **zero audio tracks**, and report its playback duration. If trimmed to D, preserve the full raw capture.
-- Export the music through **Zen Piano → 下载录音 → 下载为 WAV**, verify it independently, and preserve its original download. Screen capture never replaces this step.
+- Export the music through **Zen Piano → Download recording → Download as WAV**, verify it independently, and preserve its original download. Screen capture never replaces this step.
 - Return separate absolute file links and previews for the screen-only MP4 and site WAV. Do not claim frame-perfect synchronization from wall-clock timestamps alone.

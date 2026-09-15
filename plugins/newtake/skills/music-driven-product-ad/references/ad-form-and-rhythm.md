@@ -1,88 +1,88 @@
-# 横向剖面滚动广告结构与节奏
+# Horizontal Cross-Section Scrolling Ad: Structure and Rhythm
 
-本 Skill 的固定广告形式是：**一个外观始终不变的产品或载体，从左向右穿越 3–5 个并排空间；镜头以固定正侧面、固定高度和固定距离完成一镜到底的水平滚动。** 20 秒成片仍默认使用 5 个空间。只有用户明确要求改变广告形式时才偏离这一结构。
+This Skill's fixed ad form is: **one product or carrier whose appearance never changes, moving left to right through 3–5 side-by-side spaces; the camera completes a one-take horizontal scroll at a fixed side view, fixed height, and fixed distance.** A 20-second film still defaults to 5 spaces. Depart from this structure only when the user explicitly asks to change the ad form.
 
-## 创意骨架
+## Creative Skeleton
 
-写 Prompt 前先确定每一项：
+Confirm each item before writing the Prompt:
 
-| 要素 | 决策要求 |
+| Element | Decision requirement |
 |---|---|
-| 常量（产品） | 全片唯一不变的品牌承载物；外观、颜色、图案、材质、文字和比例保持一致 |
-| 载体 | 向右穿越空间的对象；优先让产品本身成为载体 |
-| 驱动力 | 让载体持续向右的单一物理原因，如风、惯性、传送带或自身运动 |
-| 空间 | 3–5 个，20 秒仍默认 5 个；空间形成地点、质感或生活状态的递进 |
-| 地平线 | 所有空间共用，固定在画面下四分之一；接缝两侧等高 |
-| 接缝 | 一条笔直垂直的硬边；没有遮挡物、叠化、溶解或半透明重叠 |
-| 景别与尺度 | 全片大全景；人物高占画面 1/4–1/3；载体展开宽度不超过人物身高 1/3，运动中通常约人物头部大小 |
-| 载体高低线 | 载体在画框内变化；优先低 → 中 → 高 → 中 → 低，镜头不跟随升降 |
-| 色温线 | 为各空间指定清楚的光线或色温变化，形成视觉节奏 |
-| 人物动作 | 每个空间最多一个“差一点”；全片保留 2–3 次具体动作 |
-| 首尾闭环 | 同一主角在开头失去产品，并在结尾找回产品 |
-| 首尾固定 | 开头静止后启动横移；20 秒片通常在约 16 秒抓住产品并停止镜头 |
-| 结尾动作 | 静止镜头内展示、穿戴或收起产品，完成整理动作，随后向右走出画面 |
+| Constant (product) | The one unchanging brand carrier for the whole film; appearance, color, pattern, material, text, and scale stay consistent |
+| Carrier | The object that moves right through the spaces; prefer the product itself as the carrier |
+| Driving force | One physical reason that keeps the carrier moving right, such as wind, inertia, a conveyor, or its own motion |
+| Spaces | 3–5, with 20 seconds still defaulting to 5; the spaces form a progression of place, texture, or life state |
+| Horizon | Shared by all spaces, fixed at the lower quarter of the frame; equal height on both sides of the seam |
+| Seam | One straight vertical hard edge; no obstruction, dissolve, blend, or semi-transparent overlap |
+| Framing and scale | Wide shot throughout; person height at 1/4–1/3 of the frame; the carrier's spread width no more than 1/3 of a person's height, usually about head size in motion |
+| Carrier height arc | The carrier varies within the frame; prefer low → mid → high → mid → low, and the camera does not follow it up or down |
+| Color-temperature arc | Give each space a clear light or color-temperature change to form a visual rhythm |
+| Person action | At most one "near-catch" per space; keep 2–3 concrete actions across the film |
+| Opening-ending loop | The same protagonist loses the product at the opening and recovers it at the ending |
+| Opening-ending lock | Start the lateral move after an opening still; a 20-second film usually catches the product around 16 seconds and stops the camera |
+| Ending action | In a still camera, show, put on, or stow the product, complete a tidying action, then walk right out of frame |
 
-## 六条铁律
+## Six Iron Rules
 
-1. 所有具有方向的运动只向右，包括镜头、载体、交通工具、人物朝向、人物视线和结尾离场。镜头向右横移时，背景层自然向左滑过。
-2. 机位高度、距离和视角全程不变。每个空间都是正侧面的平面剖面，没有消失点；画面线条保持水平或垂直。
-3. 地平线全程固定在画面下四分之一，硬边两侧的地平线等高、比例尺相同、视角相同。
-4. 空间接缝是一条无遮挡的竖直硬边。不得用任何物体遮挡，也不得使用叠化、溶解、闪白或半透明重叠。
-5. 每个地标只出现一次，只在背景层正面对镜头；前景不得出现该地标的任何局部结构。
-6. 全片保持大全景。人物和载体在所有空间中大小相同，载体始终很小。
+1. All directional motion moves only right, including the camera, carrier, vehicles, people's facing, people's gaze, and the ending exit. As the camera pans right, the background layer naturally slides left.
+2. Camera height, distance, and angle stay unchanged throughout. Each space is a flat side-view cross-section with no vanishing point; frame lines stay horizontal or vertical.
+3. The horizon stays fixed at the lower quarter of the frame throughout; the two sides of the hard edge share equal horizon height, the same scale, and the same angle.
+4. The space seam is an unobstructed vertical hard edge. Never block it with any object, and never use a dissolve, blend, white flash, or semi-transparent overlap.
+5. Each landmark appears once, only in the background layer facing the camera; the foreground must not show any partial structure of that landmark.
+6. Keep the wide shot for the whole film. People and the carrier are the same size in all spaces, and the carrier always stays small.
 
-## 空间与运动写法
+## Writing Spaces and Motion
 
-- 每个空间都写一句可直接看见的剖面几何关系。明确机位在什么物体的对面或同高、地面如何沿画面底边水平延伸、主体如何从左到右横贯画面，以及只看见主体面向镜头的一侧。只写“正侧面”不够。
-- 天空或高空空间也要写机位同高、地平线在下四分之一、天空约占上方四分之三，防止航拍或俯视。
-- 开场写出城市或地点名和 2–3 个标志性可见特征。场景事件在开场前已经开始，例如门正在关闭；主角是追赶者。
-- 每个地标只在背景层出现一次。不要把地标的塔脚、桥墩或局部复制到前景充当接缝。
-- 每个空间最多安排一个额外运动物，明确它向右运动，并只显示面向镜头的一侧。
-- “差一点”动作要写身体、载体和障碍或距离之间的具体关系，例如指尖距后角一掌、被栏杆挡住半步、被拉住腰带或手掌下方一掌距离。
-- 为载体单独写 3–4 个可见动态，如上下浮沉、翻卷、打旋、忽快忽慢，并写柔软、褶皱、透光、反光等材质反应。不要用“生动”“灵动”代替动作。
-- 载体路径可以有呼吸感并改变画框内高度，但整体趋势始终向右。镜头不升降、不推拉，也不追随载体改变构图。
-- 产品带文字时，明确文字只出现在产品上，不复制到建筑、交通工具、标牌或其他物体。
+- For each space, write one directly visible cross-section geometry relationship. Specify what object the camera is opposite or level with, how the ground extends horizontally along the bottom edge of the frame, how the subject runs across the frame from left to right, and that only the subject's side facing the camera is visible. Writing only "side view" is not enough.
+- For sky or high-altitude spaces, also write the camera level with the subject, the horizon in the lower quarter, and the sky taking about the upper three quarters, to prevent an aerial or top-down look.
+- At the opening, write the city or place name and 2–3 iconic visible features. The scene event has already started before the opening, for example a door already closing; the protagonist is the pursuer.
+- Each landmark appears once in the background layer. Do not copy the landmark's tower foot, bridge pier, or a partial into the foreground to act as a seam.
+- Give each space at most one extra moving object, make it clearly move right, and show only its side facing the camera.
+- A "near-catch" action must write the specific relationship between the body, the carrier, and an obstacle or distance, e.g. fingertips a palm's width from the rear corner, blocked half a step by a railing, held back by the belt, or a palm's width below the hand.
+- Write 3–4 visible dynamics for the carrier alone, such as bobbing up and down, tumbling, spinning, speeding up and slowing down, plus material reactions like softness, folds, light transmission, and reflection. Do not use "lively" or "vivid" in place of action.
+- The carrier's path may have a sense of breathing and change height within the frame, but its overall trend stays rightward. The camera does not tilt, dolly, or follow the carrier to change composition.
+- When the product carries text, make clear the text appears only on the product and is not copied onto buildings, vehicles, signage, or other objects.
 
-## 用音乐控制一镜到底的节奏
+## Using Music to Control One-Take Rhythm
 
-先从已验证的 Zen Piano WAV 中记录精确节奏图，再把结构事件映射到连续运动中。音乐决定动作时机，但不产生切镜。
+First record a precise rhythm map from the verified Zen Piano WAV, then map structural events onto the continuous motion. Music decides action timing but never creates cuts.
 
-| 音乐事件 | 视觉用途 |
+| Music event | Visual use |
 |---|---|
-| 开场留白或弱起 | 已经发生的环境事件与主角追赶入画 |
-| 第一次强落点 | 产品离开主角，镜头开始向右匀速横移 |
-| 乐句边界 | 载体穿越竖直硬边，下一空间接管主要画面 |
-| 次级瞬态 | 载体浮沉、翻卷、人物伸手、灯光或环境动作 |
-| 能量峰值 | 载体到达画框高点或最具规模感的空间 |
-| 终止式前的落点 | 载体降低并接近结尾主角 |
-| 终止式 | 主角接住产品，镜头停止，完成展示、穿戴、整理与离场 |
+| Opening space or pickup | An environmental event already in progress and the protagonist's pursuit entry |
+| First strong downbeat | The product leaves the protagonist and the camera starts panning right at a constant speed |
+| Phrase boundary | The carrier crosses a vertical hard edge and the next space takes over the main frame |
+| Secondary transient | Carrier bobbing or tumbling, a person reaching, or a lighting/environmental action |
+| Energy peak | The carrier reaches a high point in the frame or the most expansive space |
+| Landing before the cadence | The carrier lowers and approaches the ending protagonist |
+| Cadence | The protagonist catches the product, the camera stops, and the show, wearing, tidying, and exit complete |
 
-镜头开始横移后保持同一速度直到结尾停止。音乐密度通过载体动态、环境动作、光线和人物反应体现，不能用镜头变速、切镜或机位变化体现。
+After the camera starts its lateral move, keep one speed until it stops at the ending. Music density is expressed through carrier dynamics, environmental action, lighting, and people's reactions — never through camera speed changes, cuts, or camera-position changes.
 
-精确到毫秒的音乐事件保留在内部节奏分析中。Seedance 时间段使用连续的整数秒边界，只描述可见动作和空间变化，不提 Zen Piano、节拍、卡点或背景音乐。
+Millisecond-precise music events stay in the internal rhythm analysis. Seedance time ranges use continuous whole-second boundaries and describe only visible action and space changes, never mentioning Zen Piano, beats, sync points, or background music.
 
-## 目标时长与时间分配
+## Target Duration and Time Allocation
 
-- 开头静止通常为 1–2 秒，环境事件在首帧已经开始。
-- 产品离手后开始匀速横移；用音乐乐句为 3–5 个空间分配连续时间段。
-- 20 秒仍默认使用 5 个空间；用更短的空间停留和更早的动作交接收紧节奏，不因默认时长缩短而减少场景数量。
-- 结尾通常从约 16 秒开始，完成接住、展示、穿戴或收起、整理、向右离场，以及最后 2 秒空景静止。
-- 上面约 16 秒接住、最后 2 秒空景的例子对应默认 D = 20。用户指定其他时长时，按实际新配乐重排时间边界；例如 D = 25 时完整覆盖 `00:00–00:25`。
-- 所有边界取整后必须连续覆盖 `00:00–D`，不能产生空白、重叠或零时长段落。
+- The opening still is usually 1–2 seconds, with the environmental event already started in the first frame.
+- The constant-speed lateral move starts after the product leaves the hand; use musical phrases to assign continuous time ranges to the 3–5 spaces.
+- 20 seconds still defaults to 5 spaces; tighten the rhythm with shorter space stays and earlier action handoffs, and do not reduce the scene count because the default duration is short.
+- The ending usually starts around 16 seconds, completing the catch, show, put-on or stow, tidying, rightward exit, and a final 2-second empty-frame still.
+- The example of catching around 16 seconds with a final 2-second empty frame corresponds to the default D = 20. When the user specifies another duration, re-arrange the time boundaries to the actual new cue; for example, D = 25 fully covers `00:00–00:25`.
+- After rounding, all boundaries must continuously cover `00:00–D`, with no gaps, overlaps, or zero-length segments.
 
-## 提交前检查
+## Pre-Submission Checks
 
-- 所有运动物、人物朝向和视线是否明确向右？
-- 每个空间是否写了可见的剖面几何关系？
-- 地平线是否固定在下四分之一，硬边两侧是否等高且比例一致？
-- 接缝是否为无遮挡的竖直硬边，并禁止叠化、溶解和半透明重叠？
-- 每个地标是否只在背景层出现一次，前景没有复制其局部？
-- 产品文字是否有防串规则？
-- 载体是否有 3–4 个具体动态与材质反应？
-- 景别与尺度是否单独写出人物和载体的数字比例？
-- 开场是否写了地点、可见特征、已发生事件和追赶关系？
-- 是否删除了上升、下倾、俯冲、逆光、推近、环绕和航拍等会改变机位的词？
-- 开头与结尾是否绑定同一张 `@图片2`？
-- 静止、启动匀速横移和结尾停止的时间点是否写清？
-- 音乐、外加 Logo 和精确文字修正是否留给后期？
-- 时长、画幅和分辨率是否通过接口设置？
+- Do all moving objects, people's facing, and gaze clearly point right?
+- Does each space have a visible cross-section geometry relationship written?
+- Is the horizon fixed at the lower quarter, with equal height and matching scale on both sides of the hard edge?
+- Is the seam an unobstructed vertical hard edge, with dissolves, blends, and semi-transparent overlaps forbidden?
+- Does each landmark appear once in the background layer, with no partial copied into the foreground?
+- Does the product text have a containment rule?
+- Does the carrier have 3–4 concrete dynamics and material reactions?
+- Does the framing-and-scale section separately give numeric ratios for person and carrier?
+- Does the opening write the place, visible features, already-started event, and pursuit relationship?
+- Have you removed words that would change the camera, such as rise, tilt down, dive, backlight, push in, orbit, and aerial?
+- Do the opening and ending bind the same `@图片2`?
+- Are the still, constant-speed lateral-move start, and ending stop time points written clearly?
+- Are music, added logos, and precise text correction left to post?
+- Are duration, aspect ratio, and resolution set through the interface?

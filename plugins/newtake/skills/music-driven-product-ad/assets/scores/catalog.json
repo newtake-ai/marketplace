@@ -4,12 +4,14 @@
   "pieces": [
     {
       "id": "bach-c-major-prelude",
-      "title": "C大调前奏曲",
+      "title": "Prelude in C Major",
       "aliases": [
         "C 大调前奏曲",
         "巴赫C大调前奏曲",
         "BWV 846",
-        "BWV846"
+        "BWV846",
+        "C大调前奏曲",
+        "Bach Prelude in C Major"
       ],
       "composer": "J. S. Bach",
       "work": "BWV 846, WTC I Prelude No. 1",
@@ -46,9 +48,10 @@
     },
     {
       "id": "chopin-minute-waltz",
-      "title": "小狗圆舞曲",
+      "title": "Minute Waltz",
       "aliases": [
         "一分钟圆舞曲",
+        "小狗圆舞曲",
         "Minute Waltz",
         "Op.64 No.1",
         "Op. 64 No. 1"
@@ -88,9 +91,10 @@
     },
     {
       "id": "chopin-raindrop-prelude",
-      "title": "雨滴前奏曲",
+      "title": "Raindrop Prelude",
       "aliases": [
         "雨滴",
+        "雨滴前奏曲",
         "Raindrop Prelude",
         "Op.28 No.15",
         "Op. 28 No. 15"
@@ -130,12 +134,13 @@
     },
     {
       "id": "satie-gymnopedie-1",
-      "title": "裸体歌舞 No.1",
+      "title": "Gymnopédie No. 1",
       "aliases": [
         "裸体歌舞No.1",
         "裸体歌舞曲第一号",
         "第一号裸体歌舞曲",
         "裸足舞曲 No.1",
+        "裸体歌舞 No.1",
         "Gymnopédie No. 1",
         "Gymnopedie No.1"
       ],
@@ -185,9 +190,10 @@
     },
     {
       "id": "beethoven-fur-elise",
-      "title": "致爱丽丝",
+      "title": "Für Elise",
       "aliases": [
         "献给爱丽丝",
+        "致爱丽丝",
         "Für Elise",
         "Fur Elise",
         "WoO 59"
@@ -249,9 +255,10 @@
     },
     {
       "id": "mendelssohn-wedding-march",
-      "title": "婚礼进行曲",
+      "title": "Wedding March",
       "aliases": [
         "门德尔松婚礼进行曲",
+        "婚礼进行曲",
         "Wedding March",
         "Mendelssohn Wedding March",
         "Op.61 No.9"
@@ -291,9 +298,10 @@
     },
     {
       "id": "petzold-minuet-g",
-      "title": "G大调小步舞曲",
+      "title": "Minuet in G Major",
       "aliases": [
         "G 大调小步舞曲",
+        "G大调小步舞曲",
         "BWV Anh.114",
         "BWV Anh 114"
       ],
@@ -331,12 +339,14 @@
     },
     {
       "id": "beethoven-pathetique-ii",
-      "title": "悲怆奏鸣曲第二乐章",
+      "title": "Pathétique Sonata, Second Movement",
       "aliases": [
         "悲怆第二乐章",
         "悲怆奏鸣曲 第二乐章",
+        "悲怆奏鸣曲第二乐章",
         "Pathétique II",
-        "Adagio cantabile"
+        "Adagio cantabile",
+        "Pathétique Second Movement"
       ],
       "composer": "Ludwig van Beethoven",
       "work": "Piano Sonata No.8 Op.13, II. Adagio cantabile",
