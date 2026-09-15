@@ -1,6 +1,6 @@
 {
   "name": "newtake",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Create on the Newtake canvas from Codex: projects, models and generation.",
   "author": {
     "name": "Newtake",
@@ -8,7 +8,13 @@
   },
   "homepage": "https://www.newtake.ai",
   "repository": "https://github.com/newtake-ai/marketplace",
-  "keywords": ["newtake", "canvas", "image generation", "video generation", "creative"],
+  "keywords": [
+    "newtake",
+    "canvas",
+    "image generation",
+    "video generation",
+    "creative"
+  ],
   "skills": "./skills/",
   "interface": {
     "displayName": "Newtake",
@@ -16,7 +22,11 @@
     "longDescription": "Create with Newtake inside Codex. Newtake is an AI visual canvas: start from an idea, a script or a reference image and build the result on a canvas you can keep editing. With this plugin you can sign in with your Newtake account, list and open your projects and canvases, discover the image and video models available to you, create and arrange nodes, write and edit scripts, and read the timelines, groups and media already on the canvas. You can also set up image and video generation on the canvas with the model you choose, and follow what the canvas produced. Everything lands in your own Newtake account, so you can pick the work up again in the Newtake canvas at any time. Connect your Newtake account to get started.",
     "developerName": "Newtake",
     "category": "Creativity",
-    "capabilities": ["Read", "Write", "Interactive"],
+    "capabilities": [
+      "Read",
+      "Write",
+      "Interactive"
+    ],
     "brandColor": "#6640FF",
     "websiteURL": "https://www.newtake.ai",
     "logo": "./assets/newtake-icon.svg",
