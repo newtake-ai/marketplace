@@ -1,6 +1,6 @@
 {
   "name": "newtake",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Create on the Newtake canvas from Codex: projects, models and generation.",
   "author": {
     "name": "Newtake",
@@ -23,8 +23,8 @@
     "composerIcon": "./assets/newtake-icon.svg",
     "defaultPrompt": [
       "Show me my Newtake projects and canvases",
-      "What image and video models can I use in Newtake?",
-      "Plan a shot on my Newtake canvas with the model I pick"
+      "Turn my Newtake canvas work into a director treatment",
+      "Turn my script and scene references into Newtake images, Blender previs and a live-action video"
     ]
   },
   "mcpServers": "./.mcp.json"
