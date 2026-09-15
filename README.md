@@ -5,7 +5,7 @@ It carries one plugin: [`newtake`](plugins/newtake).
 
 | Install name | Display name | Endpoint | Version |
 | --- | --- | --- | --- |
-| `newtake` | Newtake | `https://mcp.newtake.ai/mcp` | `0.3.1` |
+| `newtake` | Newtake | `https://mcp.newtake.ai/mcp` | `0.3.2` |
 
 The plugin is a Codex-native HTTP remote MCP: it ships no client ID, redirect URI, credential or
 local server. The client registers and signs in through the server's own OAuth metadata.
