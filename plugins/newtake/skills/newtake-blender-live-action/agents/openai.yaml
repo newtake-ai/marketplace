@@ -1,4 +1,4 @@
 interface:
-  display_name: "Newtake Blender联动视频生成"
-  short_description: "从双视角场景与角色三视图完成白模运镜并转为实拍视频"
-  default_prompt: "使用 $newtake-blender-live-action 根据我的剧本和场景参考完成 Newtake 出图、Blender 白模运镜与 Seedance 实拍化。"
+  display_name: "Newtake Blender Live Action"
+  short_description: "Script and scene references into Blender white-model camera moves and a live-action video"
+  default_prompt: "Use $newtake-blender-live-action to turn my script and scene references into Newtake images, Blender white-model camera moves and a Seedance live-action video."
