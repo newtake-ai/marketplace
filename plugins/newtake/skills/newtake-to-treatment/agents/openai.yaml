@@ -1,4 +1,4 @@
 interface:
-  display_name: "Newtake 导演提案"
-  short_description: "把画布中的已有作品整理成 16:9 可翻页导演提案"
-  default_prompt: "使用 $newtake-to-treatment 把我 Newtake 画布中的已有作品整理成一份导演提案，没有现成作品时新建画布并衔接 POP MV 自动生成。"
+  display_name: "Newtake Director Treatment"
+  short_description: "Turn finished work in a canvas into a 16:9 page-flippable director treatment"
+  default_prompt: "Use $newtake-to-treatment to turn the finished work in my Newtake canvas into a director treatment; when there is no finished work, create a new canvas and connect to POP MV to generate automatically."
