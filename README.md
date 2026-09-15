@@ -5,7 +5,7 @@ It carries one plugin: [`newtake`](plugins/newtake).
 
 | Install name | Display name | Endpoint | Version |
 | --- | --- | --- | --- |
-| `newtake` | Newtake | `https://mcp.newtake.ai/mcp` | `0.1.0` |
+| `newtake` | Newtake | `https://mcp.newtake.ai/mcp` | `0.2.0` |
 
 The plugin is a Codex-native HTTP remote MCP: it ships no client ID, redirect URI, credential or
 local server. The client registers and signs in through the server's own OAuth metadata.
@@ -38,7 +38,7 @@ state, not a broken install.
 | Path | Contents |
 | --- | --- |
 | `.agents/plugins/marketplace.json` | Catalog: one entry, `newtake`, category `Creativity`, installation `AVAILABLE`, authentication `ON_INSTALL` |
-| `plugins/newtake/` | The package itself: `.codex-plugin/plugin.json`, `.mcp.json`, `assets/newtake-icon.svg` |
+| `plugins/newtake/` | The package itself: `.codex-plugin/plugin.json`, `.mcp.json`, `assets/newtake-icon.svg`, `skills/` |
 
 Three rules come from the Codex plugin contract and must stay true:
 
@@ -51,6 +51,34 @@ Three rules come from the Codex plugin contract and must stay true:
 `https://www.newtake.ai/newtake-favicon.svg`. Note that this icon only reaches the plugin card,
 detail page, install modal and composer; the icon on MCP tool-call rows comes from the server's
 `initialize` response instead.
+
+## Skills
+
+The package ships three workflow Skills under `plugins/newtake/skills/`:
+
+| Skill | What it does |
+| --- | --- |
+| `newtake-to-treatment` | Turns the finished work on a canvas — images, video, audio, script, storyboard — into a paginated 16:9 director treatment, delivered as `index.html` plus an assets folder and a ZIP |
+| `newtake-blender-live-action` | Script and scene references → canvas images → Blender white-model previs with deliberate camera choreography → Seedance 2.5 live-action video |
+| `music-driven-product-ad` | A Zen Piano soundtrack plus a 20-second one-take product ad that moves right through connected spaces, with the verified WAV composited in post |
+
+Two caveats before relying on them:
+
+- **They are not translated yet.** Their text mixes English and Chinese, and `newtake-to-treatment`
+  produces a Chinese-first document by design. An English pass is the next content task; until it
+  lands, treat these Skills as internal previews rather than the finished experience.
+- **They exercise paths the service does not serve yet** — generation submit, task status, export,
+  download, upload and media analysis. Run end to end only after the release gates below open; today
+  they stop at the first withheld tool.
+
+## Licensing of bundled score assets
+
+`plugins/newtake/skills/music-driven-product-ad/assets/scores/` carries piano scores. All of them are
+public domain except `mendelssohn-wedding-march`, whose Mutopia edition and the derived
+`mendelssohn-wedding-march.score.json` are **CC BY-SA 4.0** (typeset © 2017 Alexander Brock, based on
+the Dubois transcription published by Durand & Cie., plate D. & F. 9516). Keep that attribution and
+license notice when redistributing the source or any derived wedding score. Per-piece metadata,
+sources and MIDI hashes live in `assets/scores/catalog.json` and `references/repertoire.md`.
 
 ## Release status
 
@@ -83,8 +111,6 @@ here.
 
 ## Notes
 
-- Skills for advanced workflows (Blender live action, music-driven ads, treatment decks) are not
-  part of this package yet; the first release covers sign-in → projects and canvases → model
-  discovery → generation → result on the canvas.
-- The product is English-only: the plugin manifest, prompts and every future Skill in this package
-  are written in English.
+- The plugin manifest, this README and the composer prompts are English. The bundled Skills are a
+  first pass and still mix English with Chinese, and `newtake-to-treatment` currently produces a
+  Chinese-first document; translating them is the next content task.

@@ -1,6 +1,6 @@
 {
   "name": "newtake",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Create on the Newtake canvas from Codex: projects, models and generation.",
   "author": {
     "name": "Newtake",
@@ -9,6 +9,7 @@
   "homepage": "https://www.newtake.ai",
   "repository": "https://github.com/newtake-ai/marketplace",
   "keywords": ["newtake", "canvas", "image generation", "video generation", "creative"],
+  "skills": "./skills/",
   "interface": {
     "displayName": "Newtake",
     "shortDescription": "Newtake canvas, models and generation",
