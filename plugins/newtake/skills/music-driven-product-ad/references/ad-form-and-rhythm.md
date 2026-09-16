@@ -82,7 +82,7 @@ Millisecond-precise music events stay in the internal rhythm analysis. Seedance 
 - Does the framing-and-scale section separately give numeric ratios for person and carrier?
 - Does the opening write the place, visible features, already-started event, and pursuit relationship?
 - Have you removed words that would change the camera, such as rise, tilt down, dive, backlight, push in, orbit, and aerial?
-- Do the opening and ending bind the same `@图片2`?
+- Do the opening and ending bind the same `[ref2]`?
 - Are the still, constant-speed lateral-move start, and ending stop time points written clearly?
 - Are music, added logos, and precise text correction left to post?
 - Are duration, aspect ratio, and resolution set through the interface?

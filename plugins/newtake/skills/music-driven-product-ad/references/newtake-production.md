@@ -29,15 +29,15 @@ The creative plan comes from `$music-driven-product-ad`.
 
 ## Assets
 
-Upload and verify exactly these project inputs:
+Upload and verify exactly these project inputs (`[ref1]` and `[ref2]` stand for the canvas's own reference-image tokens, which must be used verbatim in the Prompt):
 
-1. `@图片1`: the single canonical product image, reused when valid or generated with Seedream 5.0 Pro from the bundled asset Prompt.
-2. `@图片2`: one 3:4 head-and-shoulders protagonist portrait, reused when valid or generated with Seedream 5.0 Pro; it locks face, hair, and skin only and is used at the opening and ending.
+1. `[ref1]`: the single canonical product image, reused when valid or generated with Seedream 5.0 Pro from the bundled asset Prompt.
+2. `[ref2]`: one 3:4 head-and-shoulders protagonist portrait, reused when valid or generated with Seedream 5.0 Pro; it locks face, hair, and skin only and is used at the opening and ending.
 3. The verified D-second Zen Piano WAV for post-generation compositing.
 
 Describe the protagonist's full outfit in the Seedance video Prompt rather than relying on the portrait. Do not upload landmark, lighting, room, or city reference images; describe them in text so their original camera angle cannot override the required side-view cross-section.
 
-Verify media IDs, formats, image dimensions, and WAV duration. Preserve the reference ordering so `@图片1` and `@图片2` resolve correctly in the Seedance prompt. Reuse existing verified nodes when resuming.
+Verify media IDs, formats, image dimensions, and WAV duration. Preserve the reference ordering so `[ref1]` and `[ref2]` resolve correctly in the Seedance prompt. Reuse existing verified nodes when resuming.
 
 ## Seedance Generation
 
@@ -45,7 +45,7 @@ Verify media IDs, formats, image dimensions, and WAV duration. Preserve the refe
 - Configure D seconds (20 by default, or the explicit project duration), plus aspect ratio, resolution, and one output in the live parameter fields. Keep those specifications out of the prose Prompt.
 - Fill [seedance-2.5-prompt.md](seedance-2.5-prompt.md) with the creative skeleton and continuous visual time ranges derived from the music analysis.
 - The Prompt must describe one continuous take with no cuts, blends, dissolves, or semi-transparent overlaps. Do not call its time blocks shots, scenes to be edited together, montage sections, or transitions.
-- Attach only the real `@图片1` product node and `@图片2` protagonist node as visual references.
+- Attach only the real `[ref1]` product node and `[ref2]` protagonist node as visual references.
 - Require a distant wide shot, no vanishing point, a horizon fixed at the lower quarter, people at 1/4–1/3 of frame height, and a carrier no wider than 1/3 of a person's height and usually near head size.
 - Join spaces with an unobstructed vertical hard edge. Never place a pole, tower, bridge structure, vehicle, or other foreground object over the seam. Each landmark appears once in the background and never reappears as a foreground fragment.
 - Ask Seedance for no background music, voice, or narration. Retain the named environmental sounds for each space with smooth cross-space transitions.
@@ -96,7 +96,7 @@ Inspect the final canvas state and rendered/player output.
 - **Direction:** camera, carrier, people, gaze, traffic, animals, and exit all move or face right; only the background scrolls left as a result of camera motion.
 - **Space joins:** every neighboring pair coexists briefly in the same frame, separated only by a straight, unobstructed vertical hard edge; both horizons align and no landmark fragment covers the seam.
 - **Scale:** people stay at 1/4–1/3 of frame height; the carrier stays small and consistent across every space.
-- **Identity:** exactly one product remains faithful to `@图片1`, and its text appears nowhere else; the opening and ending protagonist remain faithful to `@图片2` and wear the same Prompt-defined outfit.
+- **Identity:** exactly one product remains faithful to `[ref1]`, and its text appears nowhere else; the opening and ending protagonist remain faithful to `[ref2]` and wear the same Prompt-defined outfit.
 - **Audio:** the Zen Piano soundtrack is audible, environmental sounds are subordinate and continuous, and no unintended music, voice, narration, silence, or truncation remains.
 - **Metadata:** correct project, D-second playback duration, aspect ratio, resolution, model/version, node wiring, asset IDs, job status, timestamps, and export state.
 

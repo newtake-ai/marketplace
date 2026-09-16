@@ -5,7 +5,7 @@ Use this bundled workflow to turn the approved advertising music direction into 
 ## Workflow
 
 1. Open `https://zenpiano.art/play` with browser UI control, reusing the existing piano tab when available. Perform directly with supported piano-key actions; do not open the MIDI converter or add a file-conversion/import step. Treat pasted links containing prose after `/play` as malformed and use the canonical URL.
-2. Follow the user's instrument choice. For one of the bundled repertoire presets below, use the saved preset **三角钢琴顺滑预设** — that is its name as it appears in Zen Piano, so keep it verbatim rather than translating it — unless the user or advertising direction calls for another sound. Otherwise choose the available Zen instrument that best fits the approved direction. Wait for the instrument-loading overlay to disappear before playing.
+2. Follow the user's instrument choice. For one of the bundled repertoire presets below, use the saved **Smooth Grand Piano** preset unless the user or advertising direction calls for another sound; otherwise choose the available Zen instrument that best fits the approved direction. Zen Piano stores that preset under a Chinese label, so select it from the preset list by that label instead of retyping a name. Wait for the instrument-loading overlay to disappear before playing.
 3. If a saved piece is requested, load its score through the repertoire section below and preserve its melody, accompaniment, rhythm, and note lengths. Compose original material by default for advertising. Respect the audition or final-cue duration and identify any repertoire excerpt as an excerpt.
 4. Start the site's recorder immediately before the first note. Play the piano keys directly with deliberate rhythm, then stop recording after the final note has decayed. Batch timed key actions when practical so tool-call latency does not create a long silent introduction.
 5. Verify the site's recording result before export: the recorder should show a nonzero note count and a plausible duration.
@@ -15,7 +15,7 @@ Use this bundled workflow to turn the approved advertising music direction into 
 9. If the website added substantial leading or trailing silence, run `scripts/trim_wav_silence.py SOURCE DEST` from this skill's directory. Keep the downloaded source intact and deliver the cleaned copy. Optional `--target-seconds D` pads a shorter, complete cue with silence; it refuses to cut a longer cue. Inspect a quiet ending before relying on silence thresholds.
 10. Report the absolute output path, duration, sample rate, and channel count. Analyze the verified WAV before deriving the video rhythm map. When the client supports it, embed the absolute WAV path so the user can play it inline.
 
-## Saved Preset: 三角钢琴顺滑预设
+## Saved Preset: Smooth Grand Piano (stored label in Zen Piano is Chinese)
 
 Use this named preset when the user requests the saved grand-piano sound or asks to reuse this preset. It is a starting point for connected melodies with chords or broken-chord accompaniment. Preserve the user's requested piece, style, and duration; the preset does not impose a youthful mood, chord progression, or tempo. It does not replace an explicitly requested instrument or the general default above.
 

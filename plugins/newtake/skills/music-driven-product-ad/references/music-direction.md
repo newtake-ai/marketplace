@@ -11,7 +11,7 @@ The final cue defaults to 20 seconds, but its tempo, meter, groove, phrasing, ac
 - **Target-duration arrangement:** choose a coherent passage and compose or arrange a compatible close with room for decay. The helper's `--seconds 20` selects an attack window; it does not by itself create a cadence or guarantee a 20-second rendered WAV. Do not rush a whole piece, loop five seconds mechanically, or cut a sounding final note merely to fill the ad duration.
 - **Reference audio:** distinguish timbre, rhythmic onsets, accents, register, phrasing, and release before choosing what to emulate. State which traits are being adapted. A rough groove adaptation is not a verified note-for-note transcription.
 - **Instrument:** honor the user's selection; otherwise match the brief and available Zen timbres. Grand piano, electric guitar, and electric bass are valid choices when available. Use an electronic/synth-like option only if the current UI actually offers it. Choose the instrument explicitly before applying the bundled recording workflow's fallback.
-- **Smooth grand piano:** for a connected piano direction, use **三角钢琴顺滑预设** from [zen-piano-production.md](zen-piano-production.md). Read the saved control values and caveats there. Do not impose this piano sound on an electric-guitar/bass request or impose a youthful mood on a fashion/performance brief.
+- **Smooth grand piano:** for a connected piano direction, use the **Smooth Grand Piano** preset from [zen-piano-production.md](zen-piano-production.md). Read the saved control values and caveats there. Do not impose this piano sound on an electric-guitar/bass request or impose a youthful mood on a fashion/performance brief.
 
 ## Category Starting Points
 

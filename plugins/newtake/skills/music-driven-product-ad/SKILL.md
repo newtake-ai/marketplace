@@ -25,7 +25,7 @@ Direct the advertisement in Codex. By default, create a 20-second soundtrack on 
 - The soundtrack source is not a user-selectable branch: create, perform, record, and download it from `https://zenpiano.art/play` by following the bundled [Zen Piano production workflow](references/zen-piano-production.md).
 - Perform directly on the Zen Piano keyboard with documented browser key actions or permitted native keyboard events. For sustained notes on macOS, use the optional native route in the bundled piano workflow. Do not open the MIDI converter, upload MIDI, or use a conversion/import handoff for performance. Bundled scores may be read locally as note references; they do not add a converter step.
 - Do not generate music in Newtake. If Zen Piano cannot be used or its WAV cannot be verified, stop and report the blocker instead of silently substituting another music generator.
-- Zen Piano is the required performance platform. Choose an instrument available in its current UI that fits the user and advertisement, including grand piano, electric guitar, or electric bass; do not force every genre onto a piano timbre. Follow an explicit instrument choice. Reuse the bundled **三角钢琴顺滑预设** when requested or suitable.
+- Zen Piano is the required performance platform. Choose an instrument available in its current UI that fits the user and advertisement, including grand piano, electric guitar, or electric bass; do not force every genre onto a piano timbre. Follow an explicit instrument choice. Reuse the bundled **Smooth Grand Piano** preset when requested or suitable; Zen Piano stores it under a Chinese label, so select it there by that label.
 - Compose original material by default, or arrange a bundled repertoire piece when requested or clearly suited to the brief. Identify the piece and arrangement; a repertoire excerpt is not an original composition. This skill contains the score data, preparation tool, recording workflow, and WAV trimming tool it needs.
 - The visual form is fixed unless the user explicitly overrides it: one unchanging product, one carrier moving right, 3–5 spaces sharing a horizon at the lower quarter, one unobstructed vertical hard edge at each join, a fixed wide side-view camera with no vanishing point, and no cuts or dissolves.
 
@@ -70,9 +70,9 @@ All directional motion points right. The camera remains a distant wide side view
 
 Read [references/product-lock.md](references/product-lock.md).
 
-- Use exactly two visual references for Seedance: `@图片1` is the single canonical product image; `@图片2` is one 3:4 head-and-shoulders protagonist identity image used only at the opening and ending.
+- Use exactly two visual references for Seedance, written `[ref1]` and `[ref2]` in this package: the canvas labels the two attached images with its own tokens, so read those labels and use them verbatim in the Prompt. `[ref1]` is the single canonical product image; `[ref2]` is one 3:4 head-and-shoulders protagonist identity image used only at the opening and ending.
 - With usable uploaded references, analyze and reuse them. Do not redraw them merely for cleanliness. When either asset is missing or unusable, generate it with Seedream 5.0 Pro using the bundled asset Prompt, inspect it, and only then continue downstream.
-- Lock the protagonist's face, hair, and skin texture in `@图片2`. Describe one complete outfit separately in the Seedance video Prompt and keep it identical at the opening and ending; do not rely on the portrait to define full-body scale or clothing.
+- Lock the protagonist's face, hair, and skin texture in `[ref2]`. Describe one complete outfit separately in the Seedance video Prompt and keep it identical at the opening and ending; do not rely on the portrait to define full-body scale or clothing.
 - Write one concise product definition, prevent product text from appearing on other objects, and define the real contact relationship for the opening and ending. Do not provide landmark, lighting, city, or space reference images.
 
 ### 4. Create, perform, and analyze the Zen Piano soundtrack
@@ -115,7 +115,7 @@ Place hard-edge crossings and major actions on verified structural events in the
 - Write the prompt in English.
 - Use the fixed section order in [references/seedance-2.5-prompt.md](references/seedance-2.5-prompt.md): two image-reference declarations, generation goal, framing and scale, carrier motion, direction rules, continuous timeline, consistency rules, and environmental audio.
 - Keep the Prompt around 1500–2000 characters and give each sentence one job.
-- Bind the product to `@图片1`. Bind only the protagonist's face, hair, and skin to `@图片2`; specify the full outfit in the video Prompt and repeat it unchanged at the opening and ending.
+- Bind the product to `[ref1]`. Bind only the protagonist's face, hair, and skin to `[ref2]`; specify the full outfit in the video Prompt and repeat it unchanged at the opening and ending.
 - When the product contains text, state that it appears only on the product and nowhere else. Give every space a concrete geometry sentence rather than relying on the phrase “side view.”
 - Do not put model, duration, aspect ratio, or resolution in the prose specification; set them in the live interface. Whole-second timeline ranges remain in the Prompt to control the continuous action.
 - Do not mention Zen Piano, music, beats, or card points. Request no generated background music, voice, or narration; name the environmental sound of each space and ask for smooth transitions.
@@ -127,7 +127,7 @@ Read [references/newtake-production.md](references/newtake-production.md), then:
 
 1. Verify runtime, login, exact project, and canvas context.
 2. Immediately target that exact project with Browser visibility enabled, open its editable canvas in the right Codex panel, and keep the tab open for all following Newtake steps.
-3. Reuse or create `@图片1` and `@图片2` with Seedream 5.0 Pro, inspect them, then upload those two assets and the verified Zen Piano WAV. Reuse the same verified nodes when resuming, and do not upload scene or landmark reference images.
+3. Reuse or create `[ref1]` and `[ref2]` with Seedream 5.0 Pro, inspect them, then upload those two assets and the verified Zen Piano WAV. Reuse the same verified nodes when resuming, and do not upload scene or landmark reference images.
 4. Resolve the live complete model name and schema corresponding to Seedance 2.5; do not ask the user to select a model. Configure D seconds, the selected aspect ratio and resolution, and exactly one output using the live schema.
 5. Validate one virtual generation plan, then create and run exactly one video node using the full one-take prompt and the two real visual reference nodes.
 6. Never create a Newtake music-generation job. Obtain or respect the user's authorization only for the single paid video run and any separately authorized reference-image work.
@@ -154,7 +154,7 @@ Deliver the final artifact or project link, the music/movement rationale, verifi
 - Do not generate or replace the soundtrack in Newtake.
 - Use Seedance 2.5 by default without asking the user to choose a model. Deviate only on an explicit user override; if the live Seedance 2.5 route is unavailable, stop and report it.
 - Video duration defaults to 20 seconds and must match the Zen Piano recording. The actual recording determines the release, vertical hard-edge crossings, action accents, catch, camera stop, and ending cadence.
-- Use Seedream 5.0 Pro for a missing or unusable `@图片1` or `@图片2`, and Seedance 2.5 for the video. Reuse valid user-provided assets instead of regenerating them.
+- Use Seedream 5.0 Pro for a missing or unusable `[ref1]` or `[ref2]`, and Seedance 2.5 for the video. Reuse valid user-provided assets instead of regenerating them.
 - The fixed visual form is one distant wide side-view horizontal cross-section, 3–5 connected spaces, one lower-quarter horizon, rightward motion, unobstructed vertical hard-edge seams, no vanishing point, consistent small carrier scale, and no cuts or dissolves. Generate it in one video job; do not split or stitch it.
 - The exact Newtake canvas must be open and visible in the right Codex panel before any Newtake project mutation. If the required Browser handoff cannot be completed, return the exact canvas link, mark visibility unverified, and stop instead of continuing invisibly.
 - No paid retry after insufficient credits or a failed job without renewed user authorization.

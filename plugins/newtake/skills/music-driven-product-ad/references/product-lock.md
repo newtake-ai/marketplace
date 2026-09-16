@@ -1,10 +1,10 @@
 # Two Reference Images and Identity Lock
 
-The horizontal cross-section scrolling ad uses only two visual reference images. `@图片1` locks the single product; `@图片2` locks the same protagonist at the opening and ending. Landmarks, lighting, spatial forms, and seams are all defined through the video Prompt, so extra reference images do not introduce a perspective camera or the wrong framing.
+The horizontal cross-section scrolling ad uses only two visual reference images, written `[ref1]` and `[ref2]` here for the canvas's own reference-image tokens. `[ref1]` locks the single product; `[ref2]` locks the same protagonist at the opening and ending. Landmarks, lighting, spatial forms, and seams are all defined through the video Prompt, so extra reference images do not introduce a perspective camera or the wrong framing.
 
 Prefer reusing real assets the user provided and confirmed. When an asset is missing or unusable, generate it with **Seedream 5.0 Pro**, inspect it, and only then submit to Seedance 2.5. The asset images carry texture and format; fill in the specific appearance per project.
 
-## @图片1: The Single Product
+## [ref1]: The Single Product
 
 Product image requirements:
 
@@ -33,7 +33,7 @@ Write one concise product definition that includes at least:
 
 The whole film has only this one product. As it leaves the protagonist, travels through the spaces, and returns to the protagonist, its appearance, scale, and text must remain continuous — it cannot vanish, duplicate, be replaced, or deform.
 
-## @图片2: Same Protagonist at Opening and Ending
+## [ref2]: Same Protagonist at Opening and Ending
 
 The protagonist image only locks the facial features, hairstyle, and skin texture. Clothing is fully described in the video Prompt; do not rely on the asset image's clothing to lock it.
 
@@ -51,7 +51,7 @@ General Seedream 5.0 Pro Prompt:
 [person type and style] high-fashion model, [bone structure and facial feature description], [makeup look description], [hairstyle and hair color], [realistic skin texture description], real not plastic, [expression and gaze], wearing [clothing key points, optional], no logo, no accessories, plain seamless pure white background #ffffff, soft clean studio lighting, photorealistic premium fashion magazine quality, head-and-shoulders portrait, vertical 3:4
 ```
 
-Generate or submit only one protagonist identity image. The video Prompt must be explicit: the opening and ending show the same person; `@图片2` provides only facial features, hairstyle, and skin texture; the reference-image background is not adopted; and the protagonist wears one project description of clothing throughout the film.
+Generate or submit only one protagonist identity image. The video Prompt must be explicit: the opening and ending show the same person; `[ref2]` provides only facial features, hairstyle, and skin texture; the reference-image background is not adopted; and the protagonist wears one project description of clothing throughout the film.
 
 ## Carrier, Framing, and Contact Relationship
 
@@ -68,8 +68,8 @@ The protagonist reference image does not provide full-body scale. The video Prom
 
 ## Checks
 
-- Does `@图片1` contain exactly one complete product, with accurate color, material, and text?
-- Is `@图片2` a clear 3:4 head-and-shoulders identity image with realistic skin and a pure-white background?
+- Does `[ref1]` contain exactly one complete product, with accurate color, material, and text?
+- Is `[ref2]` a clear 3:4 head-and-shoulders identity image with realistic skin and a pure-white background?
 - Does the video Prompt separately specify the protagonist's outfit and keep it consistent at the opening and ending?
 - Does the product have a text-containment rule?
 - Does the product keep continuity and small scale when it leaves the hand, moves, and is caught again?

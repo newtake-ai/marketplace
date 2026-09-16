@@ -5,7 +5,7 @@ It carries one plugin: [`newtake`](plugins/newtake).
 
 | Install name | Display name | Endpoint | Version |
 | --- | --- | --- | --- |
-| `newtake` | Newtake | `https://mcp.newtake.ai/mcp` | `0.3.4` |
+| `newtake` | Newtake | `https://mcp.newtake.ai/mcp` | `0.3.5` |
 
 The plugin is a Codex-native HTTP remote MCP: it ships no client ID, redirect URI, credential or
 local server. The client registers and signs in through the server's own OAuth metadata.
@@ -62,12 +62,8 @@ The package ships three workflow Skills under `plugins/newtake/skills/`:
 | `newtake-blender-live-action` | Script and scene references → canvas images → Blender white-model previs with deliberate camera choreography → Seedance 2.5 live-action video |
 | `music-driven-product-ad` | A Zen Piano soundtrack plus a 20-second one-take product ad that moves right through connected spaces, with the verified WAV composited in post |
 
-Two things to know before relying on them:
+One thing to know before relying on them:
 
-- **A few strings stay non-English on purpose.** `@图片1` / `@图片2` are Seedance interface tokens for
-  the attached reference images, and `三角钢琴顺滑预设` is the name of a saved preset inside Zen
-  Piano. Both bind to an external interface, so they are kept byte-identical and each Skill says so
-  where it uses them. Everything else in the package is English.
 - **They exercise paths the service does not serve yet** — generation submit, task status, export,
   download, upload and media analysis. Run end to end only after the release gates below open; today
   they stop at the first withheld tool.

@@ -5,20 +5,20 @@ Use this template to generate a horizontal cross-section scrolling, one-take pro
 ## Parameters and Asset Boundaries
 
 - Set the project's total duration, aspect ratio, and resolution in the Seedance interface; this Skill defaults to D = 20 seconds. When the user specifies a duration such as 25 seconds, use D uniformly for all action ranges and the interface duration. The 2.5 in the filename is the model version, not a duration. Keep only the time ranges the continuous action needs in the body.
-- Write the two reference tokens exactly as `@图片1` and `@图片2`. They are the interface's reference-image tokens, not words: never translate, renumber or re-spell them, and before submitting confirm they match how the canvas labels the reference images you attached.
-- `@图片1` is the single product reference image, used to lock the color, pattern, material, and the product's own text.
-- `@图片2` is a 3:4 head-and-shoulders identity image that locks only the protagonist's facial features, hairstyle, and skin texture. The protagonist's outfit is written into the video Prompt; the reference image's background does not enter the video.
+- **Reference tokens.** The canvas labels the two attached reference images with its own tokens. Read those labels from the canvas and use them verbatim in the Prompt; this document writes them as `[ref1]` (the product image) and `[ref2]` (the protagonist identity image). They are interface tokens, not words: never translate, renumber or re-spell them, and confirm the labels match the attached nodes before submitting.
+- `[ref1]` is the single product reference image, used to lock the color, pattern, material, and the product's own text.
+- `[ref2]` is a 3:4 head-and-shoulders identity image that locks only the protagonist's facial features, hairstyle, and skin texture. The protagonist's outfit is written into the video Prompt; the reference image's background does not enter the video.
 - Provide only these two visual reference images to the video model. Describe landmarks, lighting, and spatial forms entirely in text.
 - Do not write music, beats, or sync points in the Prompt. Ask the video not to generate background music and to keep only the specific environmental sound of each space; the Zen Piano WAV is composited in post.
-- Do not ask the video model to generate an added logo, subtitles, or precise text correction. When the product already has text, lock it via `@图片1`, state that the text must not leak onto other objects, and verify it after output.
+- Do not ask the video model to generate an added logo, subtitles, or precise text correction. When the product already has text, lock it via `[ref1]`, state that the text must not leak onto other objects, and verify it after output.
 
 ## Fixed Template
 
 Replace the square brackets with project content. When the product has no letters or text, delete the corresponding text-containment sentence.
 
 ```text
-@图片1 is used for the [color, pattern, and material key points] of the [product]. The whole film has only this one [product]. [Letters or text] appear only on the [product], and not on any other object, building, vehicle, or sign.
-@图片2 is used for the protagonist's facial features, hairstyle, and skin texture, and appears only at the opening and ending. The opening and ending are the same person, and the image background is not adopted. The protagonist's outfit is [outfit description].
+[ref1] is used for the [color, pattern, and material key points] of the [product]. The whole film has only this one [product]. [Letters or text] appear only on the [product], and not on any other object, building, vehicle, or sign.
+[ref2] is used for the protagonist's facial features, hairstyle, and skin texture, and appears only at the opening and ending. The opening and ending are the same person, and the image background is not adopted. The protagonist's outfit is [outfit description].
 
 [Generation goal]
 A fashion ad, one continuous take, with no cuts, no dissolves, blends, or semi-transparent overlaps. The whole film is one real, continuous horizontal stage cross-section. Space boundaries slide left with the background, not as separate splits or edit wipes. Each space is a flat side-view cross-section with no vanishing point; all structural lines stay only horizontal or vertical. The horizon always sits at the lower quarter of the frame. Camera height, camera distance, and viewing angle stay unchanged throughout. [N] spaces are joined side by side on the same horizon. The space seam is a straight vertical hard edge that belongs to the same continuous stage's background structure. The horizon height, scale, and viewing angle are identical on both sides of the hard edge; lighting may differ. The hard edge slides left across the frame with the lateral move. Before the previous space has fully slid out of the left side, the next space has already entered from the right, and both coexist in the same frame. There is no obstruction at the boundary, only a vertical hard edge.
@@ -47,7 +47,7 @@ All active motion in the whole film moves only rightward. The camera pans right;
 [t_stop]–[total duration] seconds: the [carrier] drops toward the protagonist, and she [grabs or catches the product]. The camera fully stops at this moment and stays still until the end. She [shows the product briefly, product text facing the camera], then [puts on or stows the product] and completes [a small tidying action]. She turns and walks out of the right edge of the frame in profile, facing right. The frame leaves an empty [space 5] cross-section with [one environmental micro-motion], holds still for two seconds, and ends.
 
 [Consistency]
-The whole film has only one [product], consistent with @图片1, and [color, pattern, text] never change. The protagonist at the opening and ending is the same person, consistent with @图片2, with unchanged clothing. Horizon height, camera height, camera distance, viewing angle, and framing stay the same throughout — always a wide shot. Scale is consistent across all spaces. People are the same size in all spaces. The [carrier] is the same size in all spaces and always stays small. Each landmark appears once, only in the background layer.
+The whole film has only one [product], consistent with [ref1], and [color, pattern, text] never change. The protagonist at the opening and ending is the same person, consistent with [ref2], with unchanged clothing. Horizon height, camera height, camera distance, viewing angle, and framing stay the same throughout — always a wide shot. Scale is consistent across all spaces. People are the same size in all spaces. The [carrier] is the same size in all spaces and always stays small. Each landmark appears once, only in the background layer.
 
 No background music, keep only environmental sound: [write one specific sound for each space]. The environmental sound of each space transitions smoothly. No subtitles.
 ```
@@ -90,5 +90,5 @@ When the London Underground is a space, do not write only "London Underground". 
 
 - Use the live Seedance 2.5 schema to set duration, aspect ratio, resolution, and the two real reference images; do not guess parameter names.
 - Generate one one-take video of the full target duration. Do not split it into multiple nodes per space, stitch after generation, or write it as a multi-shot edit.
-- The reference order of `@图片1` and `@图片2` must match the uploaded nodes.
+- The reference order of `[ref1]` and `[ref2]` must match the uploaded nodes.
 - If the live schema has a separate Negative Prompt field, write constraints such as no cuts, no reverse motion, no perspective vanishing point, no camera change, no seam obstruction, no dissolves, no product duplication or text leakage, no protagonist identity drift, and no subtitles or watermark. Do not invent unsupported fields.
