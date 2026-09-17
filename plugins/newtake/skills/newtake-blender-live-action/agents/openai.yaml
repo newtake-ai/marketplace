@@ -1,0 +1,4 @@
+interface:
+  display_name: "Newtake Blender Live Action"
+  short_description: "Script and scene references into Blender white-model camera moves and a live-action video"
+  default_prompt: "Use $newtake-blender-live-action to turn my script and scene references into Newtake images, Blender white-model camera moves and a Seedance live-action video."

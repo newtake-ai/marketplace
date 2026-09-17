@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "newtake": {
+      "type": "http",
+      "url": "https://mcp.newtake.ai/mcp",
+      "tool_timeout_sec": 1200
+    }
+  }
+}

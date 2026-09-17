@@ -1,0 +1,4 @@
+interface:
+  display_name: "Newtake Music-Driven Ad"
+  short_description: "Drive a Seedance 2.5 one-take ad with a Zen Piano soundtrack"
+  default_prompt: "Use $music-driven-product-ad to create a 20-second soundtrack by default (adjust audio and video together when the user specifies a duration), then generate a horizontal cross-section one-take ad where the product moves right across multiple spaces."
