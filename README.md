@@ -7,7 +7,7 @@ the official `newtake` plugin, which connects Codex to the Newtake remote MCP se
 
 | Install name | Display name | Endpoint | Version |
 | --- | --- | --- | --- |
-| `newtake` | Newtake | `https://mcp.newtake.ai/mcp` | `1.0.0` |
+| `newtake` | Newtake | `https://mcp.newtake.ai/mcp` | `1.1.0` |
 
 ## Install
 
@@ -47,15 +47,16 @@ well-known endpoints answer `200`. That is the expected state, not a broken inst
 
 ## Skills
 
-The plugin ships three workflow Skills that Codex can run for you:
+The plugin ships four Skills that Codex can run for you:
 
 | Skill | What it does |
 | --- | --- |
+| `newtake-use` | General visual & audio creation entry: generate images, videos and audio, compare or benchmark models, read and edit canvas nodes, manage scripts/storyboards/timelines, and route specialized workflows |
 | `newtake-to-treatment` | Turns the finished work on a canvas — images, video, audio, script, storyboard — into a paginated 16:9 director treatment, delivered as `index.html` plus an assets folder and a ZIP |
 | `newtake-blender-live-action` | Script and scene references → canvas images → Blender white-model previs with deliberate camera choreography → Seedance 2.5 live-action video |
 | `music-driven-product-ad` | A Zen Piano soundtrack plus a 20-second one-take product ad that moves right through connected spaces, with the verified WAV composited in post |
 
-These three are previews: they lean on generation paths that are still being completed on the hosted
+The three specialized production workflows lean on generation paths that are still being completed on the hosted
 service, so check the result before you rely on it.
 
 ## Bundled score assets
