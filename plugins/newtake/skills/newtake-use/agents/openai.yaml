@@ -1,0 +1,4 @@
+interface:
+  display_name: "Newtake"
+  short_description: "Generate images and videos, compare models, edit canvas nodes, and route Newtake workflows"
+  default_prompt: "Use $newtake-use to discover models, generate or compare images and videos on my Newtake canvas, and manage canvas nodes and exports."
